@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h1>Categories</h1>
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+<button onclick="goBack()">Here</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+{% endblock %}

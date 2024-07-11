@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h1>Blogs</h1>
+<ul>
+    {% for blog in blogs %}
+        <li><a href="{% url 'blogdetails' blog.id %}">{{ blog.title }}</a></li>
+    {% endfor %}
+</ul>
+<button onclick="goBack()">Here</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h1>Comments</h1>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment.user.username }}: {{ comment.content }}</li>
+    {% endfor %}
+</ul>
+<button onclick="goBack()">Here</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock %}

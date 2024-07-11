@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h1>Main Page</h1>
+<p>Welcome to the main page of the blog website.</p>
+<button onclick="goBack()">Here</button>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock %}
